@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dimitris Xilas | Senior Front-End / Full-Stack Engineer</title>
+  <meta name="description" content="Senior engineer specializing in Elixir/Phoenix LiveView, React/Next.js, and enterprise e-commerce platforms. Based in Chios, Greece." data-i18n-attr="content:hero.description" />
+  <meta name="keywords" content="elixir, phoenix, liveview, react, nextjs, front-end, full-stack, developer, greece, chios" />
+
+  <meta property="og:title" content="Dimitris Xilas — Senior Front-End / Full-Stack Engineer" />
+  <meta property="og:description" content="Elixir/Phoenix · React/Next.js · Enterprise E-Commerce" data-i18n-attr="content:hero.description" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tenshikiri.github.io" />
+  <meta property="og:image" content="https://tenshikiri.github.io/assets/img/portrait.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dimitris Xilas — Senior Front-End / Full-Stack Engineer" />
+  <meta name="twitter:description" content="Elixir/Phoenix · React/Next.js · Enterprise E-Commerce" />
+  <meta name="twitter:image" content="https://tenshikiri.github.io/assets/img/portrait.jpg" />
+
+  <link rel="canonical" href="https://tenshikiri.github.io" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+
+<body>
+
+  <!-- Skip to content -->
+  <a href="#about" class="skip-link">Skip to content</a>
+
+  <!-- Scroll progress -->
+  <div id="progress-bar"></div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="nav-blur fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-syne text-xl font-bold tracking-tight hover:text-emerald-400 transition-colors">
+        DX<span class="text-emerald-400">.</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <div class="flex gap-7 text-sm">
+          <a href="#about" class="hover:text-emerald-400 transition-colors" data-i18n="nav.about"></a>
+          <a href="#skills" class="hover:text-emerald-400 transition-colors" data-i18n="nav.skills"></a>
+          <a href="#projects" class="hover:text-emerald-400 transition-colors" data-i18n="nav.projects"></a>
+          <a href="#experience" class="hover:text-emerald-400 transition-colors" data-i18n="nav.experience"></a>
+        </div>
+
+        <div class="flex gap-1 border border-white/10 rounded-lg p-1">
+          <button class="lang-btn" data-lang-btn="en" onclick="I18n.switchTo('en')">EN</button>
+          <button class="lang-btn" data-lang-btn="el" onclick="I18n.switchTo('el')">EL</button>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-toggle" class="md:hidden text-slate-400 hover:text-white transition-colors" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full nav-blur border-t border-white/5">
+      <div class="flex flex-col gap-4 px-6 py-6 text-sm">
+        <a href="#about" class="hover:text-emerald-400 transition-colors" data-i18n="nav.about"></a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors" data-i18n="nav.skills"></a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors" data-i18n="nav.projects"></a>
+        <a href="#experience" class="hover:text-emerald-400 transition-colors" data-i18n="nav.experience"></a>
+        <div class="flex gap-1 border border-white/10 rounded-lg p-1 self-start">
+          <button class="lang-btn" data-lang-btn="en" onclick="I18n.switchTo('en')">EN</button>
+          <button class="lang-btn" data-lang-btn="el" onclick="I18n.switchTo('el')">EL</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero-gradient min-h-screen flex items-center pt-24 pb-16 relative z-10">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+
+      <div class="space-y-8">
+        <span class="text-emerald-400 text-sm tracking-widest uppercase opacity-80" data-i18n="hero.title"></span>
+
+        <h1 class="hero-headline" data-i18n="hero.headline"></h1>
+
+        <p class="text-lg text-slate-400 max-w-md leading-relaxed" data-i18n="hero.description"></p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projects"
+             class="px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold rounded-xl transition-colors font-syne"
+             data-i18n="hero.cta_projects"></a>
+          <a href="assets/CV.pdf" target="_blank"
+             class="px-7 py-3.5 border border-white/15 hover:border-emerald-400/50 hover:text-emerald-400 rounded-xl font-medium transition-colors flex items-center gap-2">
+            <i class="fa-solid fa-file-arrow-down text-sm"></i>
+            <span data-i18n="hero.cta_cv"></span>
+          </a>
+        </div>
+
+        <div class="flex gap-5 pt-2">
+          <a href="https://github.com/tenshikiri" target="_blank" rel="noopener"
+             class="text-slate-500 hover:text-emerald-400 transition-colors text-xl" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/dimitris-xilas" target="_blank" rel="noopener"
+             class="text-slate-500 hover:text-emerald-400 transition-colors text-xl" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:dimitrisxilas@gmail.com"
+             class="text-slate-500 hover:text-emerald-400 transition-colors text-xl" aria-label="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="photo-ring w-72 h-72 md:w-80 md:h-80">
+          <div class="photo-inner w-full h-full">
+            <img src="assets/img/portrait.jpg" alt="Portrait of Dimitris Xilas" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="py-28 border-b border-white/5 relative z-10">
+    <div class="max-w-4xl mx-auto px-6 reveal">
+      <p class="text-emerald-400 text-xs tracking-widest uppercase mb-4 opacity-70" aria-hidden="true">01</p>
+      <h2 class="text-4xl font-bold mb-8 font-syne" data-i18n="about.heading"></h2>
+      <p class="text-lg text-slate-300 leading-relaxed max-w-2xl mb-10" data-i18n="about.body"></p>
+
+      <div class="flex flex-wrap gap-5">
+        <div class="flex items-center gap-2 text-slate-400 text-sm">
+          <i class="fa-solid fa-location-dot text-emerald-500"></i>
+          <span data-i18n="about.location"></span>
+        </div>
+        <div class="flex items-center gap-2 text-slate-400 text-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+          <span data-i18n="about.available"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="py-28 border-b border-white/5 relative z-10">
+    <div class="max-w-4xl mx-auto px-6 reveal">
+      <p class="text-emerald-400 text-xs tracking-widest uppercase mb-4 opacity-70" aria-hidden="true">02</p>
+      <h2 class="text-4xl font-bold mb-12 font-syne" data-i18n="skills.heading"></h2>
+
+      <div class="space-y-10">
+        <div>
+          <h3 class="text-slate-500 text-xs uppercase tracking-widest mb-4" data-i18n="skills.categories.frontend"></h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill"><img src="assets/img/phx.png" class="skill-icon" alt=""> Phoenix LiveView</span>
+            <span class="skill-pill"><img src="assets/img/react.png" class="skill-icon" alt=""> React</span>
+            <span class="skill-pill"><img src="assets/img/next.png" class="skill-icon" alt=""> Next.js</span>
+            <span class="skill-pill"><img src="assets/img/ts.png" class="skill-icon" alt=""> TypeScript</span>
+            <span class="skill-pill"><img src="assets/img/tailwind.png" class="skill-icon" alt=""> Tailwind CSS</span>
+            <span class="skill-pill"><img src="assets/img/Cypress.png" class="skill-icon" alt=""> Cypress</span>
+            <span class="skill-pill"><img src="assets/img/vite.svg" class="skill-icon" alt=""> Vite</span>
+            <span class="skill-pill"><img src="assets/img/figma.svg" class="skill-icon" alt=""> Figma</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-slate-500 text-xs uppercase tracking-widest mb-4" data-i18n="skills.categories.backend"></h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill"><img src="assets/img/elixir.svg" class="skill-icon" alt=""> Elixir</span>
+            <span class="skill-pill"><img src="assets/img/phx.png" class="skill-icon" alt=""> Phoenix</span>
+            <span class="skill-pill"><img src="assets/img/java.png" class="skill-icon" alt=""> Java</span>
+            <span class="skill-pill"><img src="assets/img/nodejs.svg" class="skill-icon" alt=""> Node.js</span>
+            <span class="skill-pill"><img src="assets/img/postgres.png" class="skill-icon" alt=""> PostgreSQL</span>
+            <span class="skill-pill"><img src="assets/img/mysql.svg" class="skill-icon" alt=""> MySQL</span>
+            <span class="skill-pill"><img src="assets/img/supabase.png" class="skill-icon" alt=""> Supabase</span>
+            <span class="skill-pill"><img src="assets/img/redis.svg" class="skill-icon" alt=""> Redis</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-slate-500 text-xs uppercase tracking-widest mb-4" data-i18n="skills.categories.platforms"></h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill"><img src="assets/img/docker.svg" class="skill-icon" alt=""> Docker</span>
+            <span class="skill-pill"><img src="assets/img/azuredevops.svg" class="skill-icon" alt=""> Azure</span>
+            <span class="skill-pill"><img src="assets/img/githubactions.svg" class="skill-icon" alt=""> GitHub Actions</span>
+            <span class="skill-pill"><img src="assets/img/circleci.svg" class="skill-icon" alt=""> CircleCI</span>
+            <span class="skill-pill"><img src="assets/img/maven.svg" class="skill-icon" alt=""> Maven / WildFly</span>
+            <span class="skill-pill"><img src="assets/img/datadog.svg" class="skill-icon" alt=""> Datadog</span>
+            <span class="skill-pill"><img src="assets/img/commercetools.svg" class="skill-icon" alt=""> Commercetools</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-slate-500 text-xs uppercase tracking-widest mb-4" data-i18n="skills.categories.seo"></h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="skill-pill">🔍 Technical SEO</span>
+            <span class="skill-pill">📊 JSON-LD</span>
+            <span class="skill-pill">🏷️ GTM</span>
+            <span class="skill-pill">📱 Pixels (Google / FB / TikTok)</span>
+            <span class="skill-pill">🛒 Skroutz / BestPrice</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="py-28 border-b border-white/5 relative z-10">
+    <div class="max-w-6xl mx-auto px-6 reveal">
+      <p class="text-emerald-400 text-xs tracking-widest uppercase mb-4 opacity-70" aria-hidden="true">03</p>
+      <h2 class="text-4xl font-bold mb-12 font-syne" data-i18n="projects.heading"></h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- ASCE.gr -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <i class="fa-solid fa-store text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://www.asce.gr" target="_blank" rel="noopener"
+                 class="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
+                 aria-label="Live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+              <a href="https://github.com/ascegr" target="_blank" rel="noopener"
+                 class="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
+                 aria-label="Code">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card1.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card1.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-emerald-400/80 bg-emerald-400/5 px-2 py-1 rounded">Elixir</span>
+            <span class="text-xs text-emerald-400/80 bg-emerald-400/5 px-2 py-1 rounded">Phoenix</span>
+            <span class="text-xs text-emerald-400/80 bg-emerald-400/5 px-2 py-1 rounded">LiveView</span>
+            <span class="text-xs text-emerald-400/80 bg-emerald-400/5 px-2 py-1 rounded">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- KTEL Herlas -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <i class="fa-solid fa-bus text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://ktelherlas.gr" target="_blank" rel="noopener"
+                 class="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
+                 aria-label="Live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card2.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card2.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-indigo-400/80 bg-indigo-400/5 px-2 py-1 rounded">React</span>
+            <span class="text-xs text-indigo-400/80 bg-indigo-400/5 px-2 py-1 rounded">Next.js</span>
+            <span class="text-xs text-indigo-400/80 bg-indigo-400/5 px-2 py-1 rounded">TypeScript</span>
+          </div>
+        </article>
+
+        <!-- Car Rental Platform -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+              <i class="fa-solid fa-car text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://cretecars.gr" target="_blank" rel="noopener"
+                 class="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
+                 aria-label="Live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card3.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card3.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-violet-400/80 bg-violet-400/5 px-2 py-1 rounded">React</span>
+            <span class="text-xs text-violet-400/80 bg-violet-400/5 px-2 py-1 rounded">Next.js</span>
+            <span class="text-xs text-violet-400/80 bg-violet-400/5 px-2 py-1 rounded">TypeScript</span>
+          </div>
+        </article>
+
+        <!-- E-Menu App -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+              <i class="fa-solid fa-utensils text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xs text-amber-400/60 bg-amber-400/10 px-2 py-0.5 rounded font-medium">WIP</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card4.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card4.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-amber-400/80 bg-amber-400/5 px-2 py-1 rounded">Elixir</span>
+            <span class="text-xs text-amber-400/80 bg-amber-400/5 px-2 py-1 rounded">Phoenix</span>
+            <span class="text-xs text-amber-400/80 bg-amber-400/5 px-2 py-1 rounded">LiveView</span>
+            <span class="text-xs text-amber-400/80 bg-amber-400/5 px-2 py-1 rounded">QR</span>
+          </div>
+        </article>
+
+        <!-- NMPLatform -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+              <i class="fa-solid fa-cubes text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <a href="https://netmechanics.gr" target="_blank" rel="noopener"
+                 class="text-slate-500 hover:text-emerald-400 transition-colors text-sm"
+                 aria-label="Live">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card5.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card5.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-cyan-400/80 bg-cyan-400/5 px-2 py-1 rounded">WildFly</span>
+            <span class="text-xs text-cyan-400/80 bg-cyan-400/5 px-2 py-1 rounded">Maven</span>
+            <span class="text-xs text-cyan-400/80 bg-cyan-400/5 px-2 py-1 rounded">Velocity</span>
+          </div>
+        </article>
+
+        <!-- Christening Microsite -->
+        <article class="project-card p-6 space-y-4">
+          <div class="flex justify-between items-start">
+            <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400">
+              <i class="fa-solid fa-cake-candles text-sm"></i>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-xs text-rose-400/60 bg-rose-400/10 px-2 py-0.5 rounded font-medium">Private</span>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-semibold font-syne mb-2" data-i18n="projects.cards.card6.title"></h3>
+            <p class="text-sm text-slate-400 leading-relaxed" data-i18n="projects.cards.card6.description"></p>
+          </div>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="text-xs text-rose-400/80 bg-rose-400/5 px-2 py-1 rounded">Next.js</span>
+            <span class="text-xs text-rose-400/80 bg-rose-400/5 px-2 py-1 rounded">React</span>
+            <span class="text-xs text-rose-400/80 bg-rose-400/5 px-2 py-1 rounded">Supabase</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience" class="py-28 relative z-10">
+    <div class="max-w-4xl mx-auto px-6 reveal">
+      <p class="text-emerald-400 text-xs tracking-widest uppercase mb-4 opacity-70" aria-hidden="true">04</p>
+      <h2 class="text-4xl font-bold mb-12 font-syne" data-i18n="experience.heading"></h2>
+
+      <div class="space-y-10">
+
+        <!-- Netmechanics -->
+        <div class="timeline-item">
+          <div class="mb-1 flex flex-wrap items-baseline gap-3">
+            <h3 class="font-semibold font-syne text-lg" data-i18n="experience.roles.current"></h3>
+            <span class="text-xs text-slate-500" data-i18n="experience.companies.current"></span>
+          </div>
+          <p class="text-xs text-emerald-400/70 mb-3">Apr 2024 — <span data-i18n="experience.present"></span></p>
+          <ul class="text-sm text-slate-400 leading-relaxed max-w-xl space-y-1.5">
+            <li data-i18n="experience.descriptions.current.l1"></li>
+            <li data-i18n="experience.descriptions.current.l2"></li>
+            <li data-i18n="experience.descriptions.current.l3"></li>
+            <li data-i18n="experience.descriptions.current.l4"></li>
+            <li data-i18n="experience.descriptions.current.l5"></li>
+            <li data-i18n="experience.descriptions.current.l6"></li>
+          </ul>
+        </div>
+
+        <!-- Outy -->
+        <div class="timeline-item">
+          <div class="mb-1 flex flex-wrap items-baseline gap-3">
+            <h3 class="font-semibold font-syne text-lg" data-i18n="experience.roles.outy"></h3>
+            <span class="text-xs text-slate-500" data-i18n="experience.companies.outy"></span>
+          </div>
+          <p class="text-xs text-emerald-400/70 mb-3">Jun 2023 — Jan 2024</p>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-xl" data-i18n="experience.descriptions.outy"></p>
+        </div>
+
+        <!-- Contractuali -->
+        <div class="timeline-item">
+          <div class="mb-1 flex flex-wrap items-baseline gap-3">
+            <h3 class="font-semibold font-syne text-lg" data-i18n="experience.roles.contractuali"></h3>
+            <span class="text-xs text-slate-500" data-i18n="experience.companies.contractuali"></span>
+          </div>
+          <p class="text-xs text-emerald-400/70 mb-3">Oct 2022 — Jun 2023</p>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-xl" data-i18n="experience.descriptions.contractuali"></p>
+        </div>
+
+        <!-- ASCE.gr -->
+        <div class="timeline-item">
+          <div class="mb-1 flex flex-wrap items-baseline gap-3">
+            <h3 class="font-semibold font-syne text-lg" data-i18n="experience.roles.asce"></h3>
+            <span class="text-xs text-slate-500" data-i18n="experience.companies.asce"></span>
+          </div>
+          <p class="text-xs text-emerald-400/70 mb-3">Nov 2020 — <span data-i18n="experience.present"></span></p>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-xl" data-i18n="experience.descriptions.asce"></p>
+        </div>
+
+        <!-- E-Shop.gr -->
+        <div class="timeline-item">
+          <div class="mb-1 flex flex-wrap items-baseline gap-3">
+            <h3 class="font-semibold font-syne text-lg" data-i18n="experience.roles.retail"></h3>
+            <span class="text-xs text-slate-500" data-i18n="experience.companies.retail"></span>
+          </div>
+          <p class="text-xs text-emerald-400/70 mb-3">Jun 2011 — Oct 2022</p>
+          <p class="text-sm text-slate-400 leading-relaxed max-w-xl" data-i18n="experience.descriptions.retail"></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="border-t border-white/5 py-10 relative z-10">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-slate-600 text-xs">
+        &copy; 2025<span id="footer-year-sep"> — </span><span id="footer-year"></span> Dimitris Xilas. <span data-i18n="footer.rights"></span>
+      </p>
+      <p class="text-slate-600 text-xs flex items-center gap-1">
+        <span data-i18n="footer.built_with"></span>
+        <i class="fa-solid fa-heart text-emerald-500 mx-1"></i>
+        <span data-i18n="footer.stack"></span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up text-xs text-slate-400"></i>
+  </button>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="languages/en.js"></script>
+  <script src="languages/el.js"></script>
+  <script src="js/i18n.js"></script>
+  <script type="module" src="src/main.js"></script>
+
+</body>
+</html>
