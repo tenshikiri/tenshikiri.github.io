@@ -217,6 +217,27 @@ body::before {
   border-color: rgba(52, 211, 153, 0.5);
 }
 
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
 #mobile-menu {
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
